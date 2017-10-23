@@ -82,7 +82,7 @@ fmt.Printf("%#v\n", kl)
     
 ### Trade Websocket
 
-```
+```go
 interrupt := make(chan os.Signal, 1)
 signal.Notify(interrupt, os.Interrupt)
 
