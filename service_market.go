@@ -81,7 +81,7 @@ func (as *apiService) OrderBook(obr OrderBookRequest) (*OrderBook, error) {
 		if err != nil {
 			return nil, err
 		}
-		quantity, err := floatFromString(rawPrice)
+		quantity, err := floatFromString(rawQuantity)
 		if err != nil {
 			return nil, err
 		}
