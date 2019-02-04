@@ -2,10 +2,11 @@ package binance
 
 import (
 	"testing"
+	"context"
 )
 
 func TestErrorHandler(t *testing.T) {
-	as := NewAPIService("", "", nil, nil).(*apiService)
+	as := NewAPIService("", "", nil, nil, context.Background()).(*apiService)
 	err := as.handleError([]byte(`{"code":-1105,"msg":"Parameter 'side' was was empty."}`))
 	tErr, ok := err.(*Error)
 	if !ok {
